@@ -58,29 +58,34 @@ img {
 }
 
 /* Butons */
+.carousel_button {
+  color: white;
+}
+
 .carousel_button_prev,
 .carousel_button_next {
   position: absolute;
   top: 50%;
-  width: 3rem;
-  height: 3rem;
-  background: #fff;
+  /* width: 3rem; */
+  /* height: 3rem; */
+  /* background: #fff; */
   /* transform: translateY(-50%); */
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  border: none;
   cursor: pointer;
   z-index: 1001;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .carousel_button_prev {
-  left: 0;
+  left: 5px;
 }
 
 .carousel_button_next {
-  right: 0;
+  right: 5px;
 }
 
-.carousel_button_next::after,
+/* .carousel_button_next::after,
 .carousel_button_prev::after {
   content: "";
   position: absolute;
@@ -91,10 +96,10 @@ img {
   border-right: 2px solid black;
   border-bottom: 2px solid black;
   transform: translate(-50%, -50%) rotate(135deg);
-}
+} */
 
-.carousel_button_next::after {
+/* .carousel_button_next::after {
   position: absolute;
   left: 47%;
   transform: translate(-50%, -50%) rotate(-45deg);
-}
+} */
