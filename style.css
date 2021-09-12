@@ -10,8 +10,9 @@ img {
 .carousel-wrapper {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 90%;
   height: 300px;
+  margin: auto;
 }
 
 .carousel {
