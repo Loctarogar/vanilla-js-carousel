@@ -15,6 +15,7 @@ img {
 }
 
 .carousel {
+  position: absolute;
   transform-style: preserve-3d;
   width: 100%;
   height: 100%;
@@ -27,7 +28,7 @@ img {
   top: 0;
   width: 100%;
   margin: auto;
-  padding: 1rem 4rem;
+  /* padding: 1rem 4rem; */
   z-index: 100;
   /* transition: transform 0.5s, opacity 0.5s, z-index 0.5s; */
   transition: left 0.5s;
@@ -37,7 +38,7 @@ img {
 .carousel_photo.active {
   left: 0;
   opacity: 1;
-  position: relative;
+  position: absolute;
   z-index: 900;
 }
 
@@ -93,6 +94,7 @@ img {
 }
 
 .carousel_button_next::after {
+  position: absolute;
   left: 47%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
