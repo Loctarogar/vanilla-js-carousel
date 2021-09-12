@@ -22,7 +22,7 @@ img {
 
 .carousel_photo {
   left: 100%;
-  opacity: 0;
+  /* opacity: 0; */
   position: absolute;
   top: 0;
   width: 100%;
@@ -48,6 +48,8 @@ img {
 
 .carousel_photo.prev {
   /* transform: translateX(100%); */
+  left: -100%;
+  transition: left 0.5s;
 }
 
 .carousel_photo.next {
@@ -62,7 +64,7 @@ img {
   width: 3rem;
   height: 3rem;
   background: #fff;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   border-radius: 50%;
   cursor: pointer;
   z-index: 1001;
