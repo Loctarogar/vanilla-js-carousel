@@ -45,7 +45,7 @@ function movePrev() {
     if (slide === 0) {
       slide = totalItems - 1;
     } else {
-      slide++;
+      slide--;
     }
 
     // move carousel to updated slide
@@ -77,7 +77,7 @@ function moveCarouselTo(slide) {
     let oldPrevious = slide - 2;
     let oldNext = slide + 2;
 
-    // text if carousel has more than three items
+    // next if carousel has more than three items
     if (totalItems - 1 > 3) {
       // checks and updates if the new slides are out of bounds
       if (newPrevious <= 0) {
