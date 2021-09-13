@@ -21,10 +21,8 @@ function setEventListeners() {
 
 // next navigation handler
 function moveNext() {
-  console.log("next");
   // check if moving
   if (!moving) {
-    console.log("in if");
     // if it is the last slide, reset to 0, else +1
     if (slide === totalItems - 1) {
       slide = 0;
@@ -65,9 +63,7 @@ function disableInteraction() {
 }
 
 function moveCarouselTo(slide) {
-  console.log("in moveCarouselTo");
   if (!moving) {
-    console.log("in moveCarouselTo in if");
     // temporarily disable interactivity
     disableInteraction();
 
@@ -113,9 +109,7 @@ function moveCarouselTo(slide) {
 }
 
 function initCarousel() {
-  console.log("classes");
   setInitialClasses();
-  console.log("listeners");
   setEventListeners();
 
   // set moving to false so that carousel becomes interactive
