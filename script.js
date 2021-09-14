@@ -1,6 +1,8 @@
 let itemClassName = "carousel_photo";
 const items = document.getElementsByClassName(itemClassName);
 const totalItems = items.length;
+const btnNext = document.querySelector(".carousel_button_next");
+const btnPrev = document.querySelector(".carousel_button_prev");
 let slide = 0;
 let moving = true;
 
@@ -52,7 +54,6 @@ function movePrev() {
 }
 
 function disableInteraction() {
-  console.log("in disableIteration");
   // set 'moving' to true for the same duration as our transition.
   // (0.5s)
   moving = true;
@@ -104,13 +105,30 @@ function moveCarouselTo(slide) {
       items[newPrevious].className = itemClassName + " prev";
       items[slide].className = itemClassName + " active";
       items[newNext].className = itemClassName + " next";
+
+      showHideButtons();
     }
+  }
+}
+
+function showHideButtons() {
+  if (slide == 0) {
+    btnPrev.classList.toggle("inactive");
+  } else if (btnPrev.classList.contains("inactive")) {
+    btnPrev.classList.toggle("inactive");
+  }
+
+  if (slide == totalItems - 1) {
+    btnNext.classList.toggle("inactive");
+  } else if (btnNext.classList.contains("inactive")) {
+    btnNext.classList.toggle("inactive");
   }
 }
 
 function initCarousel() {
   setInitialClasses();
   setEventListeners();
+  showHideButtons();
 
   // set moving to false so that carousel becomes interactive
   moving = false;
